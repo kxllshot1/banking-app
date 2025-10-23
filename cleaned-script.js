@@ -1,5 +1,9 @@
 "use strict";
 
+// Credentials Alert
+
+alert("Login Username: ignacio, Login PIN: 9430\nLogin Username: cantseeme_, Login Password: 9922");
+
 // ==================
 // DOM SELECTIONS
 // ==================
@@ -440,3 +444,4 @@ sortButton.addEventListener("click", function () {
   }
   sortedByEarliest = !sortedByEarliest;
 });
+
