@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0728b8f4d3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>The Banktist</title>
+  </head>
+  <body>
+    <header class="start-header">
+      <img src="logo.png" alt="" srcset="" class="logo" />
+    </header>
+    <header class="account-header">
+      <h2 class="welcome-title">Welcome, <span class="welcome-user"></span></h2>
+      <img src="logo.png" alt="" srcset="" class="logo" />
+      <button class="exit">Exit</button>
+    </header>
+    <main>
+      <section class="choose-method">
+        <div class="method-box">
+          <h1 class="method-heading">Log In<br />Or Create An Account</h1>
+          <button class="log-in-button">Log In</button>
+          <button class="create-an-account-button">Create An Account</button>
+        </div>
+      </section>
+      <section class="log-in-page invisible">
+        <div class="method-box">
+          <h1 class="method-heading">Log In</h1>
+          <div class="form">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              class="log-in-username"
+              autocomplete="off"
+            />
+            <input
+              type="number"
+              name="pin"
+              id="pin"
+              placeholder="PIN"
+              class="log-in-pin"
+              autocomplete="off"
+            />
+            <button class="proceed-log-in-button">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="create-account-page invisible">
+        <div class="method-box">
+          <h1 class="method-heading">Create Your Account</h1>
+          <div class="form">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              class="create-account-first-name"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              class="create-account-last-name"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              class="create-account-username"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              class="create-account-email"
+              autocomplete="off"
+            />
+            <input
+              type="number"
+              name="pin"
+              id="pin"
+              placeholder="PIN"
+              class="create-account-pin"
+              autocomplete="off"
+            />
+            <button class="proceed-create-account-button">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="main-account invisible">
+        <div class="account-container">
+          <div class="current-bar">
+            <div>
+              <h2>Current Balance</h2>
+              <span class="as-of"
+                >As Of <span class="as-of-date">04/09/2025</span></span
+              >
+            </div>
+            <h1 class="total-amount">100,000</h1>
+          </div>
+          <div class="activity-and-actions">
+            <div class="actions">
+              <div class="transfer-money">
+                <h3 class="action-heading">Transfer Money</h3>
+                <div class="action-form">
+                  <div for="username">
+                    <input
+                      type="text"
+                      name="username"
+                      id="action-username-transfer"
+                      class="action-input"
+                    />
+                    <span class="label">Username</span>
+                  </div>
+                  <div for="amount">
+                    <input
+                      type="text"
+                      name="amount"
+                      id="action-amount-transfer"
+                      class="action-input"
+                    />
+                    <span class="label">Amount</span>
+                  </div>
+                  <button class="proceed-transfer">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="request-money">
+                <h3 class="action-heading">Request Loan</h3>
+                <div class="action-form">
+                  <div for="amount">
+                    <input
+                      type="text"
+                      name="amount"
+                      id="action-amount-request"
+                      class="action-input"
+                    />
+                    <span class="label">Amount</span>
+                  </div>
+                  <button class="proceed-loan">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="close-account">
+                <h3 class="action-heading">Close Account</h3>
+                <div class="action-form">
+                  <div for="username">
+                    <input
+                      type="text"
+                      name="username"
+                      id="close-account-username"
+                      class="action-input"
+                    />
+                    <span class="label">Username</span>
+                  </div>
+                  <div for="pin">
+                    <input
+                      type="number"
+                      name="PIN"
+                      id="close-account-pin"
+                      class="action-input"
+                    />
+                    <span class="label">PIN</span>
+                  </div>
+                  <button class="proceed-close">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="amounts-and-timer">
+            <div class="amounts">
+              <span class="in">IN <span class="amount-in">$5000</span></span>
+              <span class="out">OUT <span class="amount-out">$3300</span></span>
+              <span class="interest"
+                >INT <span class="amount-int">100</span></span
+              >
+              <button class="sort">
+                <i class="fa-solid fa-arrow-up" id="sort-arrow"></i> Sort
+              </button>
+            </div>
+            <span class="timer"
+              >You Will Be Logged Out In
+              <span class="time-left"
+                ><span class="minutes">10</span>:<span class="seconds"
+                  >00</span
+                ></span
+              ></span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="error-display invisible withdrawal-bg">
+      <span class="error-text"
+        >Hmm, Seems like the <span class="taken-info"></span> is already
+        taken.</span
+      >
+    </div>
+    <script src="cleaned-script.js"></script>
+  </body>
+</html>

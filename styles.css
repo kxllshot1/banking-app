@@ -1,0 +1,517 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Onest";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Vend Sans";
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.deposit-bg {
+  background: #3dd600;
+  background: linear-gradient(
+    145deg,
+    rgba(61, 214, 0, 1) 20%,
+    rgba(60, 207, 106, 1) 80%
+  );
+  color: #fff;
+}
+
+.withdrawal-bg {
+  background: #ff2424;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 36, 36, 1) 20%,
+    rgba(217, 0, 0, 1) 80%
+  );
+  color: #fff;
+}
+
+.logo {
+  width: 50px;
+  margin: auto;
+  display: block;
+}
+
+.invisible {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.error-display {
+  width: 350px;
+  padding: 20px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  border-radius: 20px;
+  position: sticky;
+  bottom: 50px;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.start-header,
+.account-header {
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  display: flex;
+}
+
+.account-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exit {
+  background: #ff0000;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 20%,
+    rgba(247, 82, 82, 1) 80%
+  );
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 35px;
+  transition: all 0.15s ease-in-out;
+}
+
+.exit:hover {
+  font-size: 18px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 20%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+main {
+  display: flex;
+  transition: all 0.25s ease-in-out;
+}
+
+.choose-method,
+.log-in-page,
+.create-account-page,
+.main-account {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  flex: 0 0 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+.main-account {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.method-box {
+  width: 450px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.method-heading {
+  font-size: 42px;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.log-in-button,
+.create-an-account-button {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 35px;
+  border-radius: 25px;
+  margin-top: 30px;
+  transition: all 0.15s ease-in-out;
+}
+
+.log-in-button:hover,
+.create-an-account-button:hover {
+  font-size: 18px;
+}
+
+/* Log In Page Styles */
+
+#username,
+#pin,
+#name,
+#email,
+#first-name,
+#last-name {
+  display: block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  font-size: 16px;
+}
+
+.proceed-log-in-button,
+.proceed-create-account-button {
+  display: block;
+  margin: 35px auto 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 20px;
+  transition: all 0.25s ease-in-out;
+}
+
+.proceed-log-in-button:hover,
+.proceed-create-account-button:hover {
+  font-size: 18px;
+}
+
+/* Main Account Styles */
+
+.current-bar,
+.amounts-and-timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.current-bar {
+  margin-bottom: 30px;
+}
+
+.amounts-and-timer {
+  margin-top: 10px;
+}
+
+.as-of {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.activity-and-actions {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.activities {
+  width: 600px;
+  background: #fff;
+  border-radius: 20px;
+  min-height: 400px;
+  max-height: 520px;
+  overflow: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.the-activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  border-bottom: 1px solid #cacaca;
+}
+
+.nature-and-num,
+.activity-date {
+  font-size: 12px;
+}
+
+.activity-date {
+  margin-left: 15px;
+  color: #8c8c8c;
+}
+
+.nature-and-num {
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.activity-nature {
+  margin-left: 5px;
+}
+
+.actions {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transfer-money,
+.request-money,
+.close-account {
+  height: 160px;
+  padding: 20px 30px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.transfer-money {
+  background: #ffd500;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 213, 0, 1) 20%,
+    rgba(247, 189, 82, 1) 80%
+  );
+}
+
+.request-money {
+  background: #00ff73;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 255, 115, 1) 20%,
+    rgba(82, 247, 176, 1) 80%
+  );
+}
+
+.close-account {
+  background: #ff3333;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 51, 51, 1) 20%,
+    rgba(255, 119, 74, 1) 80%
+  );
+}
+
+.action-heading {
+  font-size: 18px;
+}
+
+.action-input {
+  width: 130px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 10px;
+  display: block;
+}
+
+.action-input:focus {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.action-form {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  text-align: center;
+}
+
+.label {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.proceed-transfer,
+.proceed-loan,
+.proceed-close {
+  background: #fff;
+  padding: 5px 25px;
+  border-radius: 10px;
+  height: 35px;
+  transition: all 0.25s ease-in-out;
+}
+
+.proceed-transfer:hover,
+.proceed-close:hover,
+.proceed-loan:hover {
+  font-size: 18px;
+}
+
+.in,
+.out,
+.interest {
+  margin-left: 20px;
+}
+
+.amount-in,
+.amount-out,
+.amount-int {
+  font-size: 18px;
+  margin-left: 5px;
+}
+.amount-in {
+  color: #10da6a;
+}
+
+.amount-out {
+  color: #ff0000;
+}
+
+.amount-int {
+  color: #ff3333;
+}
+
+.timer {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.time-left {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.sort {
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+/* ===== Responsive Styles ===== */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  body {
+    overflow-y: scroll;
+  }
+  .activities {
+    width: 100%;
+    max-height: 450px;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .activity-and-actions {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .method-box {
+    width: 90%;
+  }
+
+  .method-heading {
+    font-size: 32px;
+  }
+
+  .error-display {
+    width: 90%;
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+
+  .account-header {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .activities {
+    width: 100%;
+    max-height: 400px;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .transfer-money,
+  .request-money,
+  .close-account {
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .action-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .action-input,
+  .proceed-transfer,
+  .proceed-loan,
+  .proceed-close {
+    width: 100%;
+  }
+
+  .sort {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+/* Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  .method-heading {
+    font-size: 24px;
+  }
+
+  .action-heading {
+    font-size: 16px;
+  }
+
+  .amount-in,
+  .amount-out,
+  .amount-int {
+    font-size: 16px;
+  }
+
+  .activity-nature,
+  .nature-and-num,
+  .activity-date {
+    font-size: 11px;
+  }
+
+  .error-display {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
